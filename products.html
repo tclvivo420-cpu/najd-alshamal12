@@ -80,7 +80,7 @@
         <div class="product-price">105 <span>درهم</span></div>
         <div style="display:flex;gap:10px">
           <a href="product-details.html?p=mane" class="btn btn-ghost" style="flex:1">التفاصيل</a>
-          <button class="btn btn-gold" style="flex:1" data-shopify-product="mane" data-wa-text="كولاجين مان">🛒 اطلبي</button>
+          <a href="https://forms.gle/BRXiVEtLUQ3EhNFL8" target="_blank" class="btn btn-gold" style="flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none">🛒 اطلبي</a>
         </div>
       </div>
 
@@ -100,7 +100,7 @@
         <div class="product-price">105 <span>درهم</span></div>
         <div style="display:flex;gap:10px">
           <a href="product-details.html?p=vitac" class="btn btn-ghost" style="flex:1">التفاصيل</a>
-          <button class="btn btn-gold" style="flex:1" data-shopify-product="vitac" data-wa-text="فيتا سي كولاجين">🛒 اطلبي</button>
+          <a href="https://forms.gle/BRXiVEtLUQ3EhNFL8" target="_blank" class="btn btn-gold" style="flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none">🛒 اطلبي</a>
         </div>
       </div>
 
@@ -120,7 +120,7 @@
         <div class="product-price">105 <span>درهم</span></div>
         <div style="display:flex;gap:10px">
           <a href="product-details.html?p=pink" class="btn btn-ghost" style="flex:1">التفاصيل</a>
-          <button class="btn btn-gold" style="flex:1" data-shopify-product="pink" data-wa-text="كولاجين وردي">🛒 اطلبي</button>
+          <a href="https://forms.gle/BRXiVEtLUQ3EhNFL8" target="_blank" class="btn btn-gold" style="flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none">🛒 اطلبي</a>
         </div>
       </div>
 
@@ -140,7 +140,7 @@
         <div class="product-price">105 <span>درهم</span></div>
         <div style="display:flex;gap:10px">
           <a href="product-details.html?p=dtx" class="btn btn-ghost" style="flex:1">التفاصيل</a>
-          <button class="btn btn-gold" style="flex:1" data-shopify-product="dtx" data-wa-text="كولاجين ديتوكس">🛒 اطلبي</button>
+          <a href="https://forms.gle/BRXiVEtLUQ3EhNFL8" target="_blank" class="btn btn-gold" style="flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none">🛒 اطلبي</a>
         </div>
       </div>
 
@@ -163,7 +163,7 @@
         <div class="product-price" style="font-size:1.8rem">280 <span>درهم</span></div>
         <div style="display:flex;gap:10px">
           <a href="index.html#bundles" class="btn btn-ghost" style="flex:1">التفاصيل</a>
-          <div id="shopify-products-pg-2" style="flex:1"></div>
+          <a href="https://forms.gle/5cGQ19zr1Gntza368" target="_blank" class="btn btn-gold" style="flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none">🛒 اطلبي</a>
         </div>
       </div>
 
@@ -183,7 +183,7 @@
         <div class="product-price" style="font-size:1.8rem">490 <span>درهم</span></div>
         <div style="display:flex;gap:10px">
           <a href="index.html#bundles" class="btn btn-ghost" style="flex:1">التفاصيل</a>
-          <div id="shopify-products-pg-3" style="flex:1"></div>
+          <a href="https://forms.gle/EWsbDcqkivo8RVp98" target="_blank" class="btn btn-gold" style="flex:1;display:flex;align-items:center;justify-content:center;text-decoration:none">🛒 اطلبي</a>
         </div>
       </div>
 
@@ -215,52 +215,7 @@
 <button class="scroll-top">↑</button>
 
 <script src="main.js"></script>
-<script type="text/javascript">
-(function() {
-  var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-  var DOMAIN = 'nex5vs-wz.myshopify.com';
-  var TOKEN  = 'c54d1df28aa4062347801ede4d6c6875';
-  var BTN = {
-    "font-family":"Tajawal,sans-serif","font-weight":"800","font-size":"0.9rem",
-    "background-color":"#C5A059","color":"#2B0839","border-radius":"9999px",
-    "width":"100%","padding-top":"12px","padding-bottom":"12px",
-    ":hover":{"background-color":"#D4B472"},":focus":{"background-color":"#D4B472"}
-  };
-  var COURSES = [
-    { id:'7104045908017', node:'shopify-products-pg-2' },
-    { id:'7104045875249', node:'shopify-products-pg-3' }
-  ];
-  function init(ShopifyBuy) {
-    var client = ShopifyBuy.buildClient({ domain:DOMAIN, storefrontAccessToken:TOKEN });
-    ShopifyBuy.UI.onReady(client).then(function(ui) {
-      COURSES.forEach(function(c) {
-        var el = document.getElementById(c.node);
-        if (!el) return;
-        ui.createComponent('product', {
-          id: c.id, node: el, moneyFormat: 'Dhs.%20%7B%7Bamount%7D%7D',
-          options: {
-            product: {
-              styles: { button: BTN, title:{display:"none"}, prices:{display:"none"}, imgWrapper:{display:"none"}, description:{display:"none"} },
-              contents: { img:false, title:false, price:false, description:false, button:true },
-              buttonDestination: 'checkout',
-              text: { button: '🛒 اشتري' }
-            },
-            cart: { styles:{ button:BTN }, text:{ total:'Subtotal', button:'Checkout' } },
-            toggle: { styles:{ toggle:{"background-color":"#2B0839","font-family":"Tajawal,sans-serif",":hover":{"background-color":"#3D0B52"}} } }
-          }
-        });
-      });
-    });
-  }
-  if (window.ShopifyBuy && window.ShopifyBuy.UI) { init(window.ShopifyBuy); }
-  else {
-    var s = document.createElement('script'); s.src = scriptURL; s.async = true;
-    s.onload = function() { init(window.ShopifyBuy); };
-    document.head.appendChild(s);
-  }
-})();
-</script>
-<script src="shopify-buy.js"></script>
+
 <script>
 // Filter functionality
 document.querySelectorAll('.filter-btn').forEach(btn => {
